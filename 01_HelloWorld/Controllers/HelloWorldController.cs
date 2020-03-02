@@ -13,14 +13,12 @@ namespace _01_HelloWorld.Controllers
 
         // vyvola se pomoci URL https://localhost:<port>/HelloWorld/Pozdrav
         // pocet pozdravu se zadava v URL jako HelloWorld/Pozdrav?kolikrat=
-        public string Pozdrav(int kolikrat = 1)
+        public IActionResult Pozdrav(int kolikrat = 1)
         {
-            string odpoved = "";
+            ViewData["pozdrav"] = "Ahoj, světe!";
+            ViewData["kolikrat"] = kolikrat;
 
-            for (int i = 0; i < kolikrat; i++)
-                odpoved += "Ahoj, světe!\n";
-
-            return odpoved;
+            return View();
         }
     }
 }

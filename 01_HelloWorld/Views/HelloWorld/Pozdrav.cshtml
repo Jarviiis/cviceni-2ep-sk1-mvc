@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "HelloWorld";
+}
+
+<h1>Hello World</h1>
+<p>Zde jsme již ve view controlleru HelloWorld.</p>
+
+@for (int i = 0; i < (int)ViewData["kolikrat"]; i++)
+{
+    <p>@ViewData["pozdrav"]</p>
+}
+
