@@ -12,9 +12,15 @@ namespace _01_HelloWorld.Controllers
         }
 
         // vyvola se pomoci URL https://localhost:<port>/HelloWorld/Pozdrav
-        public string Pozdrav()
+        // pocet pozdravu se zadava v URL jako HelloWorld/Pozdrav?kolikrat=
+        public string Pozdrav(int kolikrat = 1)
         {
-            return "Ahoj, světe!";
+            string odpoved = "";
+
+            for (int i = 0; i < kolikrat; i++)
+                odpoved += "Ahoj, světe!\n";
+
+            return odpoved;
         }
     }
 }
