@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace _01_HelloWorld.Controllers
 {
@@ -13,6 +9,12 @@ namespace _01_HelloWorld.Controllers
         public string Index()
         {
             return "Toto je defaultní akce controlleru Hello World.";
+        }
+
+        // vyvola se pomoci URL https://localhost:<port>/HelloWorld/Pozdrav
+        public string Pozdrav()
+        {
+            return "Ahoj, světe!";
         }
     }
 }
