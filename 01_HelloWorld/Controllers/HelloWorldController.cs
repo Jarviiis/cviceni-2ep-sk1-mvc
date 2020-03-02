@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,9 +8,11 @@ namespace _01_HelloWorld.Controllers
 {
     public class HelloWorldController : Controller
     {
-        public IActionResult Index()
+        // vyvola se pomoci URL https://localhost:<port>/HelloWorld
+        // nebo take pomoci URL https://localhost:<port>/HelloWorld/Index
+        public string Index()
         {
-            return View();
+            return "Toto je defaultní akce controlleru Hello World.";
         }
     }
 }
